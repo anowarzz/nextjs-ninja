@@ -1,9 +1,21 @@
+"use client";
+import { useRouter } from "next/router";
+
 const Home = () => {
-    return (
-      <div>
-        <h2 className="text-3xl"> Welcome to Next Js</h2>
-      </div>
-    );
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/dashboard");
+  };
+
+  return (
+    <div className="min-h-screen flex justify-center flex-col items-center">
+      <h2 className="text-3xl text-center"> Welcome to Next Js Home Page</h2>
+      <h2 className="text-4xl text-center"> React Server Components</h2>
+
+      <button onClick={handleNavigation}>Dashboard</button>
+    </div>
+  );
 };
 
 export default Home;
